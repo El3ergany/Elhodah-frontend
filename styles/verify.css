@@ -1,0 +1,37 @@
+.three-dots-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100vh;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent);
+}
+
+.first,
+.second,
+.third {
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+.second {animation-delay: 333ms;}
+.third {animation-delay: 666ms;}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  } 50% {
+    opacity: .5;
+  } 100% {
+    opacity: 1;
+  }
+}

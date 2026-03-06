@@ -1,0 +1,27 @@
+export const BASE_API_URL = "http://localhost:8080";
+
+export const endPoints = {
+  login: `${BASE_API_URL}/api/auth/login`,
+  signup: `${BASE_API_URL}/api/auth/signup`,
+  logout: `${BASE_API_URL}/api/auth/logout`,
+  verifyUser: `${BASE_API_URL}/api/auth/verifyUser`,
+  activateUser: `${BASE_API_URL}/api/auth/verifyUser`,
+  verifyToken: `${BASE_API_URL}/api/auth/verifyToken`,
+  getCurrentUser: `${BASE_API_URL}/api/auth/getCurrentUser`,
+  products: `${BASE_API_URL}/api/products`,
+  categories: (id) => `${BASE_API_URL}/api/categories${id ? '/' + id : ''}`,
+  getProduct: (id) => `${BASE_API_URL}/api/products/item/${id}`,
+  search: (route) => `${BASE_API_URL}/api/${route}/search`,
+  filter: (filter) => `${BASE_API_URL}/api/filter/${filter}`,
+  contact: `${BASE_API_URL}/api/contact`,
+  users: `${BASE_API_URL}/api/users`,
+  getRole: `${BASE_API_URL}/api/auth/getRole`,
+  getFeatured: `${BASE_API_URL}/api/products/featured`,
+  cart: (id) => `${BASE_API_URL}/api/cart${id ? '/' + id : ''}`,
+  orders: `${BASE_API_URL}/api/orders`,
+  myOrders: `${BASE_API_URL}/api/orders/my-orders`,
+  trackOrder: (orderId) => `${BASE_API_URL}/api/orders/track/${orderId}`,
+  adminStats: `${BASE_API_URL}/api/admin/stats`,
+  fav: `${BASE_API_URL}/api/fav`,
+  dashboard: `${BASE_API_URL}/api/dashboard`,
+};
